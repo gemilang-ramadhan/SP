@@ -5,7 +5,7 @@ class Score(Turtle):
     def __init__(self):
         super().__init__()
         self.skor = 0
-        with open('C:\Project File\Python program\PYTHON COURSE\Code\day 20\data.txt') as file:
+        with open('\data.txt') as file:
             self.hs = int(file.read())
         self.ht()
         self.color('white')
@@ -20,7 +20,7 @@ class Score(Turtle):
     def high_score(self):
         if self.skor >= self.hs:
             self.hs = self.skor
-            with open('C:\Project File\Python program\PYTHON COURSE\Code\day 20\data.txt', 'w') as file:
+            with open('\data.txt', 'w') as file:
                 file.write(f'{self.skor}')
         self.skor = 0
         self.scoreboard()
